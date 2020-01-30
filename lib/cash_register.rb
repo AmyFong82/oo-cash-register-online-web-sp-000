@@ -10,8 +10,7 @@ class CashRegister
 
   def add_item(title, price, quantity = 1)
       @total += price * quantity
-      @@items[:title] = {price: price, quantity: quantity}
-      # @@items.fill(title, @@items.size, quantity)
+      @@items.fill(title, @@items.size, quantity)
   end
 
   def apply_discount
@@ -24,12 +23,7 @@ class CashRegister
   end
 
   def items
-    # @@items
-    self.items = []
-    @@items.collect do |hash, values|
-      self.items << hash * 
-
-    end
+    @@items
   end
 
   def void_last_transaction
