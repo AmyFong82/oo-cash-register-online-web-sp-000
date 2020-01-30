@@ -30,7 +30,8 @@ class CashRegister
 
   def void_last_transaction
     @@items.pop
-    @total
+    @@tally.pop
+    @@tally.inject(0){ |sum, x| sum + x}
   end
 
 end
