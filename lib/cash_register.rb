@@ -23,12 +23,12 @@ class CashRegister
   end
 
   def items
-    @@items
+    @items
   end
 
   def void_last_transaction
-    @@items.pop
-    @@items
+    @items.pop
+    @items
   end
 
 end
