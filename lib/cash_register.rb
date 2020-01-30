@@ -26,7 +26,10 @@ class CashRegister
   def items
     # @@items
     self.items = []
-    
+    @@items.collect do |hash, values|
+      self.items << hash * 
+
+    end
   end
 
   def void_last_transaction
